@@ -68,7 +68,7 @@ else {
       <div class="form-group">
         <label class="control-label col-sm-2" for="image">Product image:</label>
         <div class="col-sm-10">
-          <input type="text" required class="form-control" 
+          <input type="text" required class="form-control"
           name="image" id="image" placeholder="Enter the name of the img file (Put the file in the Img folder first)">
         </div>
       </div>
@@ -78,6 +78,14 @@ else {
         <div class="col-sm-10">
           <textarea required rows="3" class="form-control" name="description"
            id="description" placeholder="Enter description"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="dealers">Dealers:</label>
+        <div class="col-sm-10">
+          <input type="text" required class="form-control"
+          name="dealers" id="dealers" placeholder="Enter the names of dealers (separated by commas)">
         </div>
       </div>
 
