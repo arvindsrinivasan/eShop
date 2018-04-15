@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
 CREATE TABLE IF NOT EXISTS `reviews` (
   `customer_name` varchar(50) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `review` varchar(50) NOT NULL
+  `review` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ---------------------------------------------------------

@@ -65,7 +65,6 @@ else{
     .badge{font-size: 17px;}
     </style>
 </head>
-</head>
 <body>
   <nav class="navbar navbar-inverse"  style="border-radius: 0px;">
     <div class="container-fluid">
