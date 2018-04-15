@@ -17,6 +17,8 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
 
         $namewords = explode(" ", $name);
 
+        $dealers = explode(",", $_POST['dealers']);
+
         foreach($result as $id)
         {
              foreach($keywords as $key){
@@ -24,6 +26,9 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
              }
              foreach($namewords as $key){
                   $query = $db->query("INSERT INTO `keywords` VALUES (".$id['id'].", '".strtolower($key)."')");
+             }
+             foreach($dealers as $dealer){
+                  $write = $db->query("INSERT INTO dealers VALUES (".$id['id'].", '".$dealer."')");
              }
         }
 

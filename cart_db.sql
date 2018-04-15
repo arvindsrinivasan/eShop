@@ -118,6 +118,17 @@ CREATE TABLE IF NOT EXISTS `reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ---------------------------------------------------------
+
+-- -----------------------------------------------------------
+-- Table structure for table `products`
+--
+
+CREATE TABLE IF NOT EXISTS `dealers` (
+  `product_id` int(11) NOT NULL,
+  `dealer` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ---------------------------------------------------------
 --
 -- Indexes for dumped tables
 --
@@ -207,3 +218,15 @@ ADD CONSTRAINT `keywords_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+ALTER TABLE `messages`
+ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+ALTER TABLE `messages`
+ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`receiver_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+ALTER TABLE `reviews`
+ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+ALTER TABLE `dealers`
+ADD CONSTRAINT `dealers_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
