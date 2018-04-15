@@ -64,6 +64,15 @@ else {
           <input type="text" required class="form-control" name="name" id="name" placeholder="Enter Name">
         </div>
       </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="image">Product image:</label>
+        <div class="col-sm-10">
+          <input type="text" required class="form-control" 
+          name="image" id="image" placeholder="Enter the name of the img file (Put the file in the Img folder first)">
+        </div>
+      </div>
+
       <div class="form-group">
         <label class="control-label col-sm-2" for="description">Product description:</label>
         <div class="col-sm-10">
@@ -73,7 +82,7 @@ else {
       </div>
 
       <div class="form-group">
-          <label class="control-label col-sm-2">Keywords</label>
+          <label class="control-label col-sm-2">Keywords:</label>
           <div class="col-sm-4">
               <input type="text" class="form-control" name="keywords[]" />
           </div>

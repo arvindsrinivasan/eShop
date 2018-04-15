@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `modified` datetime NOT NULL,
   `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `hash` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
-  `active` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
+  `status` enum(\'1\',\'0\') COLLATE utf8_unicode_ci NOT NULL DEFAULT \'1\'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `total_price` float(10,2) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
+  `status` enum(\'1\',\'0\') COLLATE utf8_unicode_ci NOT NULL DEFAULT \'1\'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` float(10,2) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
+  `status` enum(\'1\',\'0\') COLLATE utf8_unicode_ci NOT NULL DEFAULT \'1\'
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --

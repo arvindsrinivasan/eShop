@@ -10,10 +10,10 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         // $row = $query->fetch_assoc();
         $s = $_POST;
         extract($_POST);
-        $query = $db->query("INSERT INTO `products` (`name`, `description`, `price`, `created`, `modified`) VALUES
-        ('".$name."', '".$description."',".$price.", '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."');");
+        $query = $db->query("INSERT INTO `products` (`name` , `img` ,`description`, `price`, `created`, `modified`) VALUES
+        ('".$name."','".$image."', '".$description."',".$price.", '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."');");
 
-        $result = $db->query("SELECT `id` FROM `products` WHERE `name` = '$name' AND `description` = '$description' AND `price` = '$price' AND `created` = '".date("Y-m-d H:i:s")."'");
+        $result = $db->query("SELECT `id` FROM `products` WHERE `name` = '$name' AND `img` = '$image' AND `description` = '$description' AND `price` = '$price' AND `created` = '".date("Y-m-d H:i:s")."'");
 
         $namewords = explode(" ", $name);
 

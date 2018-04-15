@@ -104,12 +104,14 @@ else{
         if($query->num_rows > 0){
             while($row = $query->fetch_assoc()){
                 if (in_array($row['id'], $product_ids)){
+
         ?>
         <div class="item col-lg-4 ">
             <div class="thumbnail">
                 <div class="caption">
+                <img src="img/<?php echo $row['img'] ?>" style="max-width:100%;">
                     <form action = "viewProduct.php" method = "POST">
-                      <a onclick = "this.parentNode.submit()"><?php echo $row["name"]; ?></a>
+                      <h3><a onclick = "this.parentNode.submit()"><?php echo $row["name"]; ?></a></h3>
                       <input type = "hidden" name = "id" value = "<?php echo $row['id'] ?>"/>
                     </form>
                     <p class="list-group-item-text" style="padding-bottom:10px"><?php echo $row["description"]; ?></p>
